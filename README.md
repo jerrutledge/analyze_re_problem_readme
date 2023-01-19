@@ -1,3 +1,19 @@
+# Solution
+
+This is a solution to a programming challenge detailed in the "Problem summary" section.
+
+## Implementation Language
+
+Python was chosen because of low problem complexity and Python specific endpoints described in "Execution steps".
+
+## Implementation Challenges
+
+The problem spec that 'Decimal precision must be accurate to the tenths place' is addressed by simply rounding output to the closest 0.1. 
+
+This solution does not address floating point representation inaccuracies (see https://0.30000000000000004.com/ for more details). This could have been solved by converting numbers to int (multiplying inputs by 10 and formatting output), but this is non-obvious and makes code less readable. This could have also been addressed by using python's decimal library (https://docs.python.org/3/library/decimal.html) but decimal uses extra memory and isn't obvious to programmers unfamiliar with python. Both alternative solutions should be considered if this code is to be extended or used in other contexts.
+
+Testing is also a concern. 
+
 # Problem summary
 
 Implement a command line utility, that can be invoked in common Linux operating
